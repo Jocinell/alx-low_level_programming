@@ -22,7 +22,7 @@ int main(void)
 			/* second numbers group*/
 			c = j / 10;
 			d = j % 10;
-			if ( i < j)
+			if (i < j)
 			{
 				putchar(a + '0');
 				putchar(b + '0');
