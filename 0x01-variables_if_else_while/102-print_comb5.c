@@ -11,6 +11,7 @@ int main(void)
 	int j;
 	int a, b, c, d;
 	
+	
 	for (i = 0; i < 99; i++)
 	{
 		for (j = 1; j < 100; j++)
