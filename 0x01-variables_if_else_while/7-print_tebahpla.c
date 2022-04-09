@@ -11,7 +11,7 @@ int main(void)
 	int ch;
 
 	ch = 122;
-	i =26;
+	i = 26;
 	while (i > 0)
 	{
 		putchar(ch);
