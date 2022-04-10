@@ -3,10 +3,18 @@
 #include <stdio.h>
 
 /**
+<<<<<<< HEAD
+ *  * main - Entry point
+ *   *
+ *    *
+ *     * Return: Always 0 (Success)
+ *      */
+=======
  * main - Entry point
  *
  * Return: Always 0 (Sucess)
  */
+>>>>>>> 00496f00b15906096b4b031ebd4f86ef655c8ccf
 int main(void)
 {
 	int n;
