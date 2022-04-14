@@ -23,7 +23,7 @@ int main(void)
 
 	for (i = 1; i < 91; i++)
 	{
-		printf(", %flu", aft);
+		printf(", %lu", aft);
 		aft += bef;
 		bef = aft - bef;
 	}
@@ -42,6 +42,6 @@ int main(void)
 		aft2 = aft2 + bef2;
 		bef2 = aft2 - bef2;
 	}
-	print("\n");
+	printf("\n");
 	return(0);
 }
