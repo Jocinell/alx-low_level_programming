@@ -1,46 +1,50 @@
 #include <stdio.h>
 
 /**
- * main - main block
- * Description: computes and prints the sum
- * of all the multiples of 3 or
- * 5 below 1024 (excluded), followed by a new line
- * Return: 0
+ * main - Entry point
+ * Desc:  rogram that finds and prints the first 98
+ * Fibonacci numbers, starting with 1 and 2, followed
+ * by a new line.
+ *
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	unsigned long int i;
-	unsigned long int bef = 1;
-	unsigned long int aft = 2;
-	unsigned long int l = 1000000000;
-	unsigned long int bef1;
-	unsigned long int bef2;
-	unsigned long int aft1;
-	unsigned long int aft2;
+	unsigned long prev, next, ans;
+	unsigned long prev_half1, prev_half2, next_half1, next_half2;
+	unsigned long half1, half2;
+	int i;
 
-	printf("%lu", bef);
-
-	for (i = 1; i < 91; i++)
+	i = 1;
+	prev = 1;
+	next = 2;
+	printf("%lu, %lu, ", prev, next);
+	while (i <= 90)
 	{
-		printf(", %lu", aft);
-		aft += bef;
-		bef = aft - bef;
+		ans = prev + next;
+		prev = next;
+		next = ans;
+		printf("%lu, ", ans);
+		i++;
 	}
-	bef1 = (bef / l);
-	bef2 = (bef % l);
-	aft1 = (aft / l);
-	aft2 = (aft % l);
-
-	for (i = 92; i < 99; ++i)
+	prev_half1 = prev / 10000000000, next_half1 = next / 10000000000;
+	prev_half2 = prev % 10000000000, next_half2 = next % 10000000000;
+	for (i = 91; i < 97; i++)
 	{
-		printf(", %lu", aft1 + (aft2
-/ l));
-		printf("%lu", aft2 % l);
-		aft1 = aft + bef1;
-		bef1 = aft1 - bef1;
-		aft2 = aft2 + bef2;
-		bef2 = aft2 - bef2;
+		half1 = prev_half1 + next_half1;
+		half2 = prev_half2 + next_half2;
+		if (half2 > 9999999999)
+		{
+			half1 += 1;
+			half2 %= 10000000000;
+		}
+		printf("%lu%lu", half1, half2);
+		if (i != 96)
+			printf(", ");
+		prev_half1 = next_half1;
+		prev_half2 = next_half2;
+		next_half1 = half1;
+		next_half2 = half2;
 	}
 	printf("\n");
 	return (0);
