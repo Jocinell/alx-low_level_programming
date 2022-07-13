@@ -1,6 +1,3 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
-
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
@@ -21,10 +18,4 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
-
 #endif
-<<<<<<< HEAD
-Footer
-© 2022 GitHub, In
-=======
->>>>>>> 64714d850692879ab0ccc1052b2aea1daca85d7b
